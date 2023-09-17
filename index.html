@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+<!-- Тут язык должен быть ru -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Метрика</title>
     <link rel="icon" href="images/metrika-favicon.png" type="image/png" />
+    <!-- Почему ресет отдельно подключен?  -->
     <link rel="stylesheet" href="styles/reset.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,6 +18,7 @@
   </head>
   <body>
     <header>
+      <!-- Див выглядит лишним. Лучше данные стили повесить на header -->
       <div class="container">
         <div class="header-wrapper">
           <a href="https://slowrunr.github.io/Me3ka/">
@@ -30,6 +33,7 @@
               />
             </picture>
           </a>
+          <!-- Не хватает <nav>. Это все таки навигация/меню -->
           <ul class="nav__links">
             <li class="nav__link">
               <a href="#about">О НАС</a>
@@ -44,6 +48,8 @@
               <a href="#contacts">КОНТАКТЫ</a>
             </li>
           </ul>
+          <!-- Тут должна быть кнопка, а не див  -->
+          <!-- <button class="js-burger-btn burger-btn" type='button'></button> -->
           <div class="js-burger-btn burger-btn"></div>
         </div>
       </div>
@@ -55,6 +61,7 @@
               alt="Стилизованное слово 'Метрика' черным цветом на белом фоне"
             />
           </a>
+          <!-- Не хватает <nav>. Это все таки навигация/меню -->
           <ul class="burger-nav">
             <li class="burger-nav__link">
               <a href="#about">О НАС</a>
@@ -88,6 +95,7 @@
             Современные и стильные <br>
             интерьеры для комфортной жизни
           </h1>
+          <!-- Я бы тут добавил изображение через разметку, а не стили. Потому что оно больше похоже на контентное. -->
           <div class="intro__image">
             <p class="intro__text">
               Мы - команда квалифицированных дизайнеров и архитекторов,
@@ -131,6 +139,7 @@
                   alt="ЖК ПРАВОБЕРЕЖНЫЙ. Интерьер с красивым видом на собор. В центре роскошный диван темно-кораллового цвета."
                 />
               </picture>
+              <!-- Тут лучше использовать тег заголовка. С учетом иерархии это будет h3 -->
               <p>ЖК ПРАВОБЕРЕЖНЫЙ — 112 м² — 2023</p>
               <a href="#">Подробнее →</a>
             </li>
@@ -187,6 +196,7 @@
                 alt="На чертеже лежит простой карандаш, направленный грифелем на юго-восток"
               />
               <p class="service__price">от 2500₽/м²</p>
+              <!-- Тут тоже лучше заголовок использовать -->
               <p class="service__desc">Планировочное решение</p>
             </li>
             <li class="service__item">
@@ -217,9 +227,11 @@
               <p class="service__desc">Комплектация</p>
             </li>
           </ul>
+          <!-- Тег button нужно использовать -->
           <div class="js-btn order__service">Заказать услугу</div>
           <div class="js-popup popup">
             <div class="js-popup__content popup__content">
+              <!-- Должна быть кнопка. Изображение лучше добавить через css. -->
               <div>
                 <img
                   class="js-popup__close-btn popup__close-btn"
@@ -227,6 +239,7 @@
                   alt="Кнопка в виде крестика черного цвета, при нажатии на которую закроется всплывающее окно"
                 />
               </div>
+              <!-- Заголовок должен быть -->
               <p class="popup__title">Заказать услугу</p>
               <p class="popup__instruction">
                 Заполните форму, мы свяжемся с вами в течение суток
@@ -251,6 +264,8 @@
                   placeholder="Номер телефона"
                 />
               </form>
+              <!-- Кнопка должна быть. -->
+              <!-- И если добавляется снаружи (не внутри формы), то нужна явная привязка к форме. Типа <button form='form_id'/> -->
               <a href="email:mungaslov.nft@gmail.com" class="send__order"
                >Отправить
               </a>
@@ -262,7 +277,9 @@
         <div class="container">
           <h2>ОТЗЫВЫ</h2>
           <ul class="testimonials__list">
+            <!-- В идеале, я думаю, каждый отзыв оборачивать в свой тег (div/section/article). Потому что это самостоятельный компонент. А ul/li всего лишь указатель на то, что это список. -->
             <li class="testimonial__box">
+              <!-- Заголовок -->
               <p class="customer__info">Ксения, проект 65 кв.м.</p>
               <p class="customer__said">
                 Хочу искренне поблагодарить Вас за работу, проделанную на высоком
@@ -270,7 +287,7 @@
                 Ваше умение правильно слышать пожелания своих клиентов и выполнять
                 работу, которая превосходит все ожидания! Мы даже не надеялись,
                 что на 34 кв.м. кто-то сможет нам грамотно разместить все, что мы
-                хотим и даже больше!<br>
+                хотим и даже больше!<br> <!-- Вместо br логичнее использовать несколько <p> -->
                 <br>
                 Вам удалось это просто превосходно! Нам лишь осталось воплотить
                 красоту, которую Вы нам создали в жизнь и поделиться с Вами
@@ -315,6 +332,7 @@
         <div class="gallery__wrapper">
           <div class="gallery__title-wrapper">
             <div class="container">
+              <!-- Заголовок -->
               <p class="gallery__title" id="gallery">ГАЛЕРЕЯ ПРОЕКТОВ</p>
             </div>
           </div>
@@ -362,6 +380,7 @@
           <div class="gallery__controls-wrapper">
             <div class="container">
               <div class="gallery__controls">
+                <!-- Иконку нужно добавить через css -->
                 <button class="gallery__control-prev">
                   <picture>
                     <source

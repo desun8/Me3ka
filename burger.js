@@ -2,7 +2,8 @@ const BURGER_OPENED_CLASSNAME = "burger_open";
 const BURGER_BTN_OPENED_CLASSNAME = "burger-btn_open";
 const BODY_FIXED_CLASSNAME_2 = "body_fixed";
 
-const bodyNode2 = document.querySelector("body");
+// Я бы все таки не называл бы элементы как smthNode, лучше smthElement/smtElem/smtEl
+const bodyNode2 = document.querySelector("body"); // можно проще - document.body
 const burgerNode = document.querySelector(".js-burger");
 const burgerBtnNode = document.querySelector(".js-burger-btn");
 const burgerContentNode = document.querySelector(".js-burger__content");
